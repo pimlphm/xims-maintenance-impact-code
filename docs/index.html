@@ -18,6 +18,7 @@
       <nav aria-label="Primary navigation">
         <a href="#workspace">Explorer</a>
         <a href="#method">Method</a>
+        <a href="#architecture">Architecture</a>
         <a href="https://github.com/pimlphm/xims-maintenance-impact-code">Source ↗</a>
       </nav>
     </header>
@@ -117,6 +118,20 @@
           <article><span>02</span><h3>Comparable effect</h3><p>Report absolute and relative mean change plus Cohen's d using the pooled local variation.</p></article>
           <article><span>03</span><h3>Direction-aware reading</h3><p>Interpret improvement according to whether higher or lower values represent healthier operation.</p></article>
         </div>
+      </section>
+
+      <section class="architecture" id="architecture" aria-labelledby="architecture-title">
+        <div class="architecture-heading"><p class="eyebrow">Standalone architecture</p><h2 id="architecture-title">One local interface, four explicit layers.</h2><p>The public and offline launch paths converge on the same browser application. CSV data is parsed and analysed locally; only derived metrics are rendered.</p></div>
+        <div class="architecture-flow" aria-label="MII-CODE architecture from launch to results">
+          <article><span>Launch</span><strong>GitHub Pages<br />or launch_gui.py</strong><small>No host application</small></article>
+          <b aria-hidden="true">→</b>
+          <article><span>Interface</span><strong>Browser GUI</strong><small>CSV + demo controls</small></article>
+          <b aria-hidden="true">→</b>
+          <article><span>Core</span><strong>Local analysis module</strong><small>Windows + effect size</small></article>
+          <b aria-hidden="true">→</b>
+          <article><span>Output</span><strong>Metrics + trajectory</strong><small>Auditable interpretation</small></article>
+        </div>
+        <a class="architecture-link" href="https://github.com/pimlphm/xims-maintenance-impact-code/blob/main/docs/SOFTWARE_ARCHITECTURE.md">Read the complete software architecture and interface contract →</a>
       </section>
     </main>
 

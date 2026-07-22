@@ -23,10 +23,12 @@ Local absolute paths in the working copies were replaced with placeholders such 
 - Notebook outputs and execution counters were removed.
 - Caches, generated outputs, raw data, weights, backups, manuscripts, and publication PDFs were excluded.
 - No credential value is intentionally included; optional Kimi access reads environment variables only.
-- Public release remains subject to dataset terms, contributor approval, and selection of a software license.
+- Public reuse remains subject to dataset terms, contributor approval, and selection of a software license.
 
 ## Repository status
 
-This repository is a private, sanitized research-software pre-release. No explicit software licence has yet been approved, so the repository must not be made public or redistributed until the rights holders and contributors select a licence and confirm compatibility with the reused datasets and libraries.
+This repository is a public, sanitized research-software pre-release. No explicit software licence has yet been approved. Public visibility does not by itself grant general permission to copy, modify or redistribute the software; those reuse terms will be defined after the rights holders and contributors select a licence and confirm compatibility with the reused datasets and libraries.
+
+Current tagged pre-release: `v0.1.0` (2026-07-22).
 
 The DMP OPIDoR field-by-field software questionnaire is available at `docs/DMP_OPIDoR_questionnaire.md`.

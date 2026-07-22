@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Browser-based explorer for interpretable maintenance-impact analysis." />
+    <meta name="theme-color" content="#071a2b" />
+    <title>MII-CODE · Maintenance Impact Explorer</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#workspace">Skip to analysis workspace</a>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="MII-CODE home">
+        <span class="brand-mark">MI</span>
+        <span><strong>MII-CODE</strong><small>Maintenance Impact Explorer</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#workspace">Explorer</a>
+        <a href="#method">Method</a>
+        <a href="https://github.com/pimlphm/xims-maintenance-impact-code">Source ↗</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Interpretable maintenance analytics</p>
+          <h1>See what changed <em>after maintenance.</em></h1>
+          <p class="lede">Explore a health or sensor signal around a maintenance event. Compare local pre/post windows, quantify the effect, and inspect the trajectory—all in your browser.</p>
+          <div class="hero-actions">
+            <button class="button primary" id="heroDemo" type="button">Load synthetic demo</button>
+            <a class="button ghost" href="#workspace">Use my CSV</a>
+          </div>
+          <p class="privacy-note"><span aria-hidden="true">◉</span> Local-first: selected files never leave this browser.</p>
+        </div>
+        <div class="signal-card" aria-hidden="true">
+          <div class="signal-card-head"><span>Health trajectory</span><span class="live-dot">local</span></div>
+          <div class="mini-chart">
+            <span class="maintenance-line"></span>
+            <i style="--x:0;--y:68"></i><i style="--x:1;--y:61"></i><i style="--x:2;--y:56"></i><i style="--x:3;--y:50"></i><i style="--x:4;--y:46"></i><i style="--x:5;--y:78"></i><i style="--x:6;--y:73"></i><i style="--x:7;--y:69"></i><i style="--x:8;--y:64"></i>
+          </div>
+          <div class="signal-legend"><span><b class="dot pre"></b> Before</span><span><b class="dot post"></b> After</span><strong>+18.6%</strong></div>
+        </div>
+      </section>
+
+      <section class="workspace" id="workspace" aria-labelledby="workspace-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">Analysis workspace</p><h2 id="workspace-title">Maintenance-event comparison</h2></div>
+          <span class="status-pill" id="dataStatus">Synthetic demo ready</span>
+        </div>
+
+        <div class="app-grid">
+          <aside class="control-panel" aria-label="Analysis controls">
+            <div class="panel-title"><span>01</span><div><h3>Configure input</h3><p>CSV or built-in example</p></div></div>
+
+            <label class="file-drop" for="csvFile">
+              <span class="upload-icon">↑</span>
+              <strong>Choose a CSV file</strong>
+              <small>Numeric columns · max 5 MB</small>
+              <input id="csvFile" type="file" accept=".csv,text/csv" />
+            </label>
+
+            <div class="field">
+              <label for="signalColumn">Signal column</label>
+              <select id="signalColumn"></select>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="eventIndex">Maintenance index</label>
+                <input id="eventIndex" type="number" min="2" step="1" />
+              </div>
+              <div class="field">
+                <label for="windowSize">Window per side</label>
+                <input id="windowSize" type="number" min="2" max="5000" step="1" value="30" />
+              </div>
+            </div>
+
+            <label class="toggle-row" for="higherHealthy">
+              <span><strong>Higher value means healthier</strong><small>Reverse for vibration, error or risk signals</small></span>
+              <input id="higherHealthy" type="checkbox" checked />
+            </label>
+
+            <div class="control-actions">
+              <button class="button primary wide" id="analyzeButton" type="button">Analyse maintenance effect</button>
+              <button class="button text" id="demoButton" type="button">Reset to demo</button>
+            </div>
+            <p class="error-message" id="errorMessage" role="alert" aria-live="polite"></p>
+          </aside>
+
+          <section class="results-panel" aria-label="Analysis results">
+            <div class="verdict" id="verdictBox">
+              <div class="verdict-icon" id="verdictIcon">↗</div>
+              <div><p>Interpreted maintenance effect</p><h3 id="verdictTitle">Clear short-term improvement</h3><span id="verdictDetail">The post-maintenance window is higher and the standardized effect is large.</span></div>
+            </div>
+
+            <div class="metrics" aria-label="Summary metrics">
+              <article><span>Before mean</span><strong id="beforeMean">—</strong><small id="beforeRange">local window</small></article>
+              <article><span>After mean</span><strong id="afterMean">—</strong><small id="afterRange">local window</small></article>
+              <article><span>Relative change</span><strong id="relativeChange">—</strong><small id="absoluteChange">absolute —</small></article>
+              <article><span>Effect size</span><strong id="effectSize">—</strong><small id="effectLabel">Cohen's d</small></article>
+            </div>
+
+            <div class="chart-shell">
+              <div class="chart-head"><div><h3>Signal trajectory</h3><p id="chartSubtitle">Synthetic health index</p></div><div class="chart-key"><span><b class="dot pre"></b>Pre-window</span><span><b class="dot post"></b>Post-window</span></div></div>
+              <canvas id="signalChart" height="330" aria-label="Line chart of the selected signal around maintenance"></canvas>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="method" id="method" aria-labelledby="method-title">
+        <div class="method-intro"><p class="eyebrow">Transparent by design</p><h2 id="method-title">A compact diagnostic, not a black box.</h2><p>This interface deliberately uses simple, auditable statistics. Full scientific reproduction remains in the repository notebooks and Python exports.</p></div>
+        <div class="method-steps">
+          <article><span>01</span><h3>Local windows</h3><p>Select equal-length observations immediately before and after the nominated maintenance index.</p></article>
+          <article><span>02</span><h3>Comparable effect</h3><p>Report absolute and relative mean change plus Cohen's d using the pooled local variation.</p></article>
+          <article><span>03</span><h3>Direction-aware reading</h3><p>Interpret improvement according to whether higher or lower values represent healthier operation.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>MII-CODE · public research-software pre-release</span><span>Exploratory analysis only · not safety certification</span></footer>
+    <script type="module" src="./assets/app.mjs"></script>
+  </body>
+</html>

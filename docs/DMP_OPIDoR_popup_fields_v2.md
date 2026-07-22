@@ -15,6 +15,13 @@ This supplement gives one value for every field shown in the DMP OPIDoR popups. 
 - **Resource identifier type:** `URL`
 - **Audience:** `Users and developers`
 
+### Record 1A — Interactive web GUI
+
+- **Resource title:** `MII-CODE interactive maintenance-impact web interface`
+- **Resource identifier:** `https://pimlphm.github.io/xims-maintenance-impact-code/`
+- **Resource identifier type:** `URL`
+- **Audience:** `Researchers, users and developers`
+
 ### Record 2 — Code catalogue
 
 - **Resource title:** `MII-CODE code catalogue`

@@ -32,3 +32,11 @@ This repository is a public, sanitized research-software pre-release. No explici
 Current tagged pre-release: `v0.1.0` (2026-07-22).
 
 The DMP OPIDoR field-by-field software questionnaire is available at `docs/DMP_OPIDoR_questionnaire.md`.
+
+## Web GUI
+
+Open the public, browser-based maintenance-impact explorer:
+
+**https://pimlphm.github.io/xims-maintenance-impact-code/**
+
+The GUI can generate a synthetic example or analyse a numeric signal from a local CSV file. Data remains in the browser and is not uploaded. The interface reports pre-/post-maintenance means, absolute and relative change, standardized effect size, an interpretation, and an interactive trajectory plot. It is an exploratory companion to the research code, not a substitute for the full C-MAPSS or NGAFID workflows.

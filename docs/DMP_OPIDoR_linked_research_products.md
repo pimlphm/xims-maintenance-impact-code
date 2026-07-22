@@ -4,8 +4,8 @@ Use one **Add an element** form for each product below.
 
 ## MII-CODE software fields
 
-- **Software version number:** `0.1.0`
-- **Software typology(ies):** `Standalone software`; `Application software`; `Simulation tool`; `Machine-learning software`; `Data-analysis software`; `Computational notebook`
+- **Software version number:** `0.2.0`
+- **Software typology(ies):** `Standalone software`; `Application software`; `Web application`; `Machine-learning software`; `Data-analysis software`; `Computational notebook`
 - **Is your software linked to any other research products?:** `Yes`
 
 ### MII linked product 1 — C-MAPSS
@@ -46,8 +46,8 @@ Use one **Add an element** form for each product below.
 
 ## GMO-CODE software fields
 
-- **Software version number:** `0.1.0`
-- **Software typology(ies):** `Standalone software`; `Application software`; `Simulation tool`; `Optimization software`; `Decision-support software`; `Machine-learning software`; `Computational notebook`
+- **Software version number:** `0.2.0`
+- **Software typology(ies):** `Standalone software`; `Plug-in`; `Software component`; `Application software`; `Web application`; `Optimization software`; `Decision-support software`; `Machine-learning software`; `Computational notebook`
 - **Is your software linked to any other research products?:** `Yes`
 
 ### GMO linked product 1 — TEP
@@ -65,7 +65,7 @@ Use one **Add an element** form for each product below.
 - **Briefly describe the research output:** `Public research software that produces interpretable maintenance-impact and health information used as an upstream input to the maintenance-optimization workflow.`
 - **Research product persistent identifier:** `https://github.com/pimlphm/xims-maintenance-impact-code`
 - **Research product identifier type:** `URL`
-- **Version number:** `0.1.0`
+- **Version number:** `0.2.0`
 - **License:** `Not yet assigned; publicly visible source with no general reuse licence`
 
 ### GMO linked product 3 — NGAFID

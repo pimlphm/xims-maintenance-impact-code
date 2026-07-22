@@ -1,10 +1,16 @@
 # MII-CODE — DMP OPIDoR popup fields v2
 
-Updated: 2026-07-22  
+Updated: 2026-07-23
+
 Public repository: https://github.com/pimlphm/xims-maintenance-impact-code  
-Versioned public release: https://github.com/pimlphm/xims-maintenance-impact-code/releases/tag/v0.1.0
+Versioned public release: https://github.com/pimlphm/xims-maintenance-impact-code/releases/tag/v0.2.0
 
 This supplement gives one value for every field shown in the DMP OPIDoR popups. Add each record separately.
+
+## Software typology
+
+- **Primary typology:** `Standalone software`
+- **Additional typologies:** `Application software`; `Web application`; `Data-analysis software`; `Machine-learning software`; `Computational notebook`
 
 ## 1. Documentation — Linked references
 
@@ -21,6 +27,13 @@ This supplement gives one value for every field shown in the DMP OPIDoR popups. 
 - **Resource identifier:** `https://pimlphm.github.io/xims-maintenance-impact-code/`
 - **Resource identifier type:** `URL`
 - **Audience:** `Researchers, users and developers`
+
+### Record 1B — Software architecture and interfaces
+
+- **Resource title:** `MII-CODE standalone software architecture and interface specification`
+- **Resource identifier:** `https://github.com/pimlphm/xims-maintenance-impact-code/blob/main/docs/SOFTWARE_ARCHITECTURE.md`
+- **Resource identifier type:** `URL`
+- **Audience:** `Developers, maintainers, reviewers and data stewards`
 
 ### Record 2 — Code catalogue
 
@@ -76,37 +89,37 @@ The exact amount cannot be inferred from the code. It must come from the approve
 ## 3. Programming language popup
 
 - **Name of the programming language:** `Python`
-- **Version of the programming language:** `Python 3 (minor version not pinned in v0.1.0)`
+- **Version of the programming language:** `Python 3 (minor version not pinned in v0.2.0)`
 
 Jupyter Notebook is an execution/documentation environment, not a second programming language.
 
 ## 4. Dependencies popups
 
-Add one record per dependency. Versions are deliberately reported as unpinned because `v0.1.0` does not contain a lock file.
+Add one record per dependency. Versions are deliberately reported as unpinned because `v0.2.0` does not contain a lock file.
 
 | Dependency Name | Dependency version | Dependency URI |
 | --- | --- | --- |
-| JupyterLab or Jupyter Notebook | Not pinned in v0.1.0 | https://jupyter.org/ |
-| matplotlib | Not pinned in v0.1.0 | https://pypi.org/project/matplotlib/ |
-| NumPy | Not pinned in v0.1.0 | https://pypi.org/project/numpy/ |
-| pandas | Not pinned in v0.1.0 | https://pypi.org/project/pandas/ |
-| scikit-learn | Not pinned in v0.1.0 | https://pypi.org/project/scikit-learn/ |
-| SciPy | Not pinned in v0.1.0 | https://pypi.org/project/scipy/ |
-| PyTorch | Not pinned in v0.1.0 | https://pypi.org/project/torch/ |
+| JupyterLab or Jupyter Notebook | Not pinned in v0.2.0 | https://jupyter.org/ |
+| matplotlib | Not pinned in v0.2.0 | https://pypi.org/project/matplotlib/ |
+| NumPy | Not pinned in v0.2.0 | https://pypi.org/project/numpy/ |
+| pandas | Not pinned in v0.2.0 | https://pypi.org/project/pandas/ |
+| scikit-learn | Not pinned in v0.2.0 | https://pypi.org/project/scikit-learn/ |
+| SciPy | Not pinned in v0.2.0 | https://pypi.org/project/scipy/ |
+| PyTorch | Not pinned in v0.2.0 | https://pypi.org/project/torch/ |
 
 ### Runtime environment — Additional information
 
-> MII-CODE is distributed as two Jupyter notebooks and two corresponding Python code-cell exports. It was prepared and syntax-validated on Microsoft Windows. A Python 3 environment with Jupyter Notebook or JupyterLab is required. The declared external dependencies are matplotlib, NumPy, pandas, scikit-learn, SciPy and PyTorch; exact versions are not pinned in v0.1.0. A CUDA-capable GPU may accelerate training, but CPU paths are present. Raw C-MAPSS and NGAFID data and trained weights are not distributed and must be obtained separately under the providers' terms.
+> MII-CODE v0.2.0 is standalone software with a standard-library local launcher and a browser GUI; run `python launch_gui.py` for local use. The research package also contains two Jupyter notebooks and two corresponding Python code-cell exports. It was prepared and syntax-validated on Microsoft Windows. The analysis workflows use matplotlib, NumPy, pandas, scikit-learn, SciPy and PyTorch; exact versions are not pinned in v0.2.0. A CUDA-capable GPU may accelerate training, but CPU paths are present. Raw C-MAPSS and NGAFID data and trained weights are not distributed and must be obtained separately under the providers' terms.
 
 ## 5. Software preservation — catalogue/repository popup
 
 - **Select or add the catalogue (or repository) in which the software is referenced:** `GitHub`
-- **Indicate the persistent identifier:** `https://github.com/pimlphm/xims-maintenance-impact-code/releases/tag/v0.1.0`
+- **Indicate the persistent identifier:** `https://github.com/pimlphm/xims-maintenance-impact-code/releases/tag/v0.2.0`
 - **Then specify the ID type:** `URL`
 
 ### Referencing — Additional information
 
-> Version 0.1.0 is publicly referenced by a version-specific GitHub release URL. No software DOI or Software Heritage persistent identifier has yet been assigned. A later approved release should be deposited in a trusted research repository such as Zenodo or Recherche Data Gouv to obtain a DOI; the DMP record must then be updated without replacing the existing GitHub release reference.
+> Version 0.2.0 is publicly referenced by a version-specific GitHub release URL. No software DOI or Software Heritage persistent identifier has yet been assigned. A later approved release should be deposited in a trusted research repository such as Zenodo or Recherche Data Gouv to obtain a DOI; the DMP record must then be updated without replacing the existing GitHub release reference.
 
 ### Software Heritage field
 
@@ -116,8 +129,8 @@ Leave the SWHID field empty until an actual `swh:1:...` identifier has been veri
 
 ### Has information about this software already been published? — Record 1
 
-- **Resource title:** `MII-CODE public source-code release v0.1.0`
-- **Resource identifier:** `https://github.com/pimlphm/xims-maintenance-impact-code/releases/tag/v0.1.0`
+- **Resource title:** `MII-CODE public source-code release v0.2.0`
+- **Resource identifier:** `https://github.com/pimlphm/xims-maintenance-impact-code/releases/tag/v0.2.0`
 - **Resource identifier type:** `URL`
 - **Audience:** `Researchers, users and developers` — fill this only if the popup displays an Audience field.
 

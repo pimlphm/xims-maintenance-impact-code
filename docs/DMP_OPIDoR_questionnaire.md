@@ -44,9 +44,11 @@ It does **not** modify or replace the existing **TEP / HI CONSTRUCTION CODE / Si
 
 ### URL of the site describing the software (or project)
 
-**[暂留空]**
+**[直接填写；当前为私有仓库]**
 
-当前没有已确认的公开项目网页或代码仓库 URL。不要填写本地磁盘路径。创建公开仓库或存储库记录后，再填写其稳定 URL。
+> https://github.com/pimlphm/xims-maintenance-impact-code
+
+该 URL 指向受控访问的私有 GitHub 仓库。许可和权利人批准后如改为公开仓库，URL 可保持不变。
 
 ### Development start date
 
@@ -151,21 +153,19 @@ It does **not** modify or replace the existing **TEP / HI CONSTRUCTION CODE / Si
 
 **[当前选择或输入]**
 
-> No — not yet. A Git-based public software forge is planned after rights-holder and licence approval.
-
-如果公开 GitHub、GitLab 或其他 forge 仓库已由项目组创建，则将此项改为相应 forge 名称。
+> GitHub
 
 ### If so, provide the link to the code repository or the access URL
 
-**[暂留空]**
+**[直接填写]**
 
-公开仓库建立后填写仓库主页 URL；不要填写本地 ZIP 路径或临时共享链接。
+> https://github.com/pimlphm/xims-maintenance-impact-code
 
 ### How to access the source code?
 
 **[当前选择最接近的值]**
 
-> Restricted or controlled access during pre-release; public access is planned after contributor and licence approval.
+> Restricted access through a private GitHub repository during pre-release; public access is planned after contributor, rights-holder and licence approval.
 
 若下拉框只有简化选项，当前选择 **Restricted access**。公开存储库发布后改为 **Open access**。
 
@@ -173,9 +173,9 @@ It does **not** modify or replace the existing **TEP / HI CONSTRUCTION CODE / Si
 
 **[当前建议]**
 
-> No formal VCS was identified in the retained source snapshot; Git is planned for the public repository.
+> Git
 
-不要仅因为建议使用 Git 就把尚未建立的版本库登记为现状。当前包通过版本化 ZIP 名称、源文件清单和 SHA-256 校验值记录来源与完整性。
+当前主分支为 `main`，GitHub 私有仓库保存版本历史；版本化 ZIP、来源清单和 SHA-256 校验值继续用于归档完整性验证。
 
 ### What tests were used to verify the code quality?
 
@@ -209,16 +209,14 @@ It does **not** modify or replace the existing **TEP / HI CONSTRUCTION CODE / Si
 
 ### Provide links to user and/or developer documentation, if possible
 
-**[暂留空]**
+**[逐项添加；当前链接需要 GitHub 私有仓库访问权限]**
 
-目前文档位于上传 ZIP 内，而不是稳定公开 URL。公开仓库建立后，应逐项添加以下文件的永久链接：
-
-- `README.md`
-- `CODE_CATALOG.md`
-- `requirements.txt`
-- `SOURCE_MANIFEST.csv`
-- `SECURITY_AND_LIMITATIONS.md`
-- `LICENSE_REVIEW_REQUIRED.md`，或许可确认后替换为正式 `LICENSE`
+- `https://github.com/pimlphm/xims-maintenance-impact-code/blob/main/README.md`
+- `https://github.com/pimlphm/xims-maintenance-impact-code/blob/main/CODE_CATALOG.md`
+- `https://github.com/pimlphm/xims-maintenance-impact-code/blob/main/requirements.txt`
+- `https://github.com/pimlphm/xims-maintenance-impact-code/blob/main/SOURCE_MANIFEST.csv`
+- `https://github.com/pimlphm/xims-maintenance-impact-code/blob/main/SECURITY_AND_LIMITATIONS.md`
+- `https://github.com/pimlphm/xims-maintenance-impact-code/blob/main/docs/DMP_OPIDoR_questionnaire.md`
 
 ### Additional information
 
